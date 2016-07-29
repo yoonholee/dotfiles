@@ -1,7 +1,7 @@
 # create dotfiles_old in homedir
-echo -n "Creating dotfiles_old for backup"
+printf "Creating dotfiles_old for backup\n"
 mkdir -p ~/dotfiles_old
-echo -n "Creating vim colors directory"
+printf "Creating vim colors directory\n"
 mkdir -p ~/.vim
 mkdir -p ~/.vim/colors
 
@@ -12,4 +12,4 @@ mv ~/.bashrc ~/dotfiles_old/
 # set my dotfiles
 cp vimrc ~/.vimrc
 cp bashrc ~/.bashrc
-cp colors/* ~/.vim/colors
+cp vim/colors/* ~/.vim/colors
