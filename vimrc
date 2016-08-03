@@ -11,6 +11,9 @@ set fileformat=unix
 " Line Numbering
 :set number
 
+" Enable mouse
+:set mouse=a
+
 " Use changes in .vimrc right away
 autocmd! bufwritepost .vimrc source %
 
