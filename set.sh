@@ -8,8 +8,11 @@ mkdir -p ~/.vim/colors
 # backup files
 mv ~/.vimrc ~/dotfiles_old/
 mv ~/.bashrc ~/dotfiles_old/
+mv ~/.tmux.conf ~/dotfiles_old/
 
 # set my dotfiles
 cp vimrc ~/.vimrc
 cp bashrc ~/.bashrc
+cp tmux.conf ~/.tmux.conf
 cp vim/colors/* ~/.vim/colors
+

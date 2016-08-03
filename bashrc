@@ -91,7 +91,7 @@ alias l='ls -CF'
 
 alias f='find . | grep -P --color $*'
 
-export TERM=xterm-color
+export TERM='xterm-256color'
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -126,7 +126,7 @@ case $TERM in
 local UC=$COLOR_WHITE               # user's color
 [ $UID -eq "0" ] && UC=$COLOR_RED   # root's color
 
-PS1="$TITLEBAR\n\[${UC}\]\u \[${COLOR_LIGHT_BLUE}\]\${PWD} \[${COLOR_BLACK}\]\$(vcprompt) \n\[${COLOR_LIGHT_GREEN}\]→\[${COLOR_NC}\] "  
+PS1="$TITLEBAR\n\[${UC}\]\u \[${COLOR_LIGHT_BLUE}\]\${PWD} \n\[${COLOR_LIGHT_GREEN}\]→\[${COLOR_NC}\] "  
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

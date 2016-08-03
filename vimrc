@@ -80,4 +80,5 @@ let python_highlight_all=1
 syntax on
 set background=dark
 set t_Co=256
+set term=screen-256color
 colorscheme jellybeans
