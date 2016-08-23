@@ -86,8 +86,11 @@ fi
 
 # some more ls aliases
 alias ll='ls -alF'
-alias la='ls -A'
 alias l='ls -CF'
+
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push origin master'
 
 alias f='find . | grep -P --color $*'
 
