@@ -39,32 +39,21 @@ nnoremap <space> za
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" CtrlP settings
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-
 " let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
 
 " All Plugins
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'ervandew/supertab'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'nvie/vim-flake8'
+Plugin 'scrooloose/syntastic'
 Plugin 'flazz/vim-colorschemes'
 
 " All Plugins must be declared before this
 call vundle#end()            
 filetype plugin indent on   
-
-" Ignore files in NERDTree
-let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " Backup settings
 set backup
