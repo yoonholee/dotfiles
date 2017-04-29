@@ -1,10 +1,17 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-PATH="$PATH:/usr/local/cuda/bin";export PATH 
-LD_LIBRARY_PATH="/usr/local/cuda/lib64"; export LD_LIBRARY_PATH
+
+export PYTHONPATH=~/rllab:$PYTHONPATH
+export PATH=~/anaconda2/bin:$PATH
+export PATH="/usr/bin/python:$PATH"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
+export CUDA_HOME=/usr/local/cuda
+export CUDA_BIN_PATH=/usr/local/cuda/bin
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/user/.oh-my-zsh
+export ZSH=/home/lyh/.oh-my-zsh
+
+alias tmux="TERM=screen-256color-bce tmux -2"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -85,4 +92,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias tmux='TERM=screen-256color-bce tmux'
