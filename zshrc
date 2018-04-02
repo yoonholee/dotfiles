@@ -8,15 +8,18 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/e
 export CUDA_HOME=/usr/local/cuda
 export CUDA_BIN_PATH=/usr/local/cuda/bin
 
+alias gpu0='CUDA_VISIBLE_DEVICES=0 python '
+alias gpu1='CUDA_VISIBLE_DEVICES=1 python '
+alias gpu2='CUDA_VISIBLE_DEVICES=2 python '
+alias gpu3='CUDA_VISIBLE_DEVICES=3 python '
+
+alias nvidia='watch -n 1 nvidia-smi'
+
 # Path to your oh-my-zsh installation.
-export ZSH=/home/lyh/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
+ZSH_THEME="geometry/geometry"
 
 alias tmux="TERM=screen-256color-bce tmux -2"
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="geometry/geometry"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
