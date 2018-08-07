@@ -15,3 +15,5 @@ cp vimrc ~/.vimrc
 cp bashrc ~/.bashrc
 cp tmux.conf ~/.tmux.conf
 cp vim/colors/* ~/.vim/colors
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
