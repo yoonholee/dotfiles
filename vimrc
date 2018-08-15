@@ -43,17 +43,20 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " All Plugins
-Plugin 'tpope/vim-fugitive'
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'tmhedberg/SimpylFold'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/syntastic'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-surround' " e.g. ysiw( to surround word with ()
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Raimondi/delimitMate'
 
 " All Plugins must be declared before this
 call vundle#end()            
 filetype plugin indent on   
+
+set updatetime=100
 
 " Backup settings
 set backup
