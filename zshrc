@@ -5,7 +5,7 @@ alias nvidia="watch -n 1 nvidia-smi"
 alias tmux="TERM=screen-256color-bce tmux -2"
 
 alias srvr="ssh -Y deploy@mm-ai-tr22.dakao.io"
-alias sync="rsync -avz --delete --include='**/*.py' --exclude={'**/.ipynb_checkpoints','**/*.ipynb','**/dataset','**/result','**/Pipfile*'} ~/repos/ deploy@mm-ai-tr22.dakao.io:eddy/repos/"
+alias sync="rsync -avz --delete --include='**/*.py' --exclude={'**/.ipynb_checkpoints','**/*.ipynb','**/dataset','**/result','**/Pipfile*','**/requirements.txt'} ~/repos/ deploy@mm-ai-tr22.dakao.io:eddy/repos/"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/kakao/.oh-my-zsh"
