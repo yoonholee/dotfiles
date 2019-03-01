@@ -14,9 +14,11 @@ mv ~/.config/flake8 ~/dotfiles_old/
 
 # set my dotfiles
 cp vimrc ~/.vimrc
-cp bashrc ~/.bashrc
+cp zshrc ~/.zshrc
 cp tmux.conf ~/.tmux.conf
 cp vim/colors/* ~/.vim/colors
 cp flake8 ~/.config/flake8
+
+source ~/.zshrc
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
