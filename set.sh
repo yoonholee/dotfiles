@@ -20,6 +20,8 @@ mkdir -p ~/.vim/colors
 mkdir -p ~/.config
 
 # set my dotfiles
+printf "Deploying new .bash_profile\n"
+cp bash_profile ~/.bash_profile
 printf "Deploying new .vimrc\n"
 cp vimrc ~/.vimrc
 printf "Deploying new .zshrc\n"
