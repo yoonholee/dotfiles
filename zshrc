@@ -4,11 +4,11 @@
 alias nvidia="watch -n 1 nvidia-smi"
 alias tmux="TERM=screen-256color-bce tmux -2"
 
-alias srvr="ssh -Y deploy@mm-ai-tr22.dakao.io"
-alias sync="rsync -avz --delete --include='**/*.py' --exclude={'**/.ipynb_checkpoints','**/*.ipynb','**/dataset','**/result','**/Pipfile*','**/requirements.txt'} ~/repos/ deploy@mm-ai-tr22.dakao.io:eddy/repos/"
+# alias srvr="ssh -Y deploy@mm-ai-tr22.dakao.io"
+# alias sync="rsync -avz --delete --include='**/*.py' --exclude={'**/.ipynb_checkpoints','**/*.ipynb','**/dataset','**/result','**/Pipfile*','**/requirements.txt'} ~/repos/ deploy@mm-ai-tr22.dakao.io:eddy/repos/"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kakao/.oh-my-zsh"
+export ZSH=".oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
