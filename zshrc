@@ -1,18 +1,15 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
+export PYTHONBREAKPOINT=ipdb.set_trace
 alias nvidia="watch -n 1 nvidia-smi"
 alias tmux="TERM=screen-256color-bce tmux -2"
-
-# alias srvr="ssh -Y deploy@mm-ai-tr22.dakao.io"
-# alias sync="rsync -avz --delete --include='**/*.py' --exclude={'**/.ipynb_checkpoints','**/*.ipynb','**/dataset','**/result','**/Pipfile*','**/requirements.txt'} ~/repos/ deploy@mm-ai-tr22.dakao.io:eddy/repos/"
+alias tboard="tensorboard --host 0.0.0.0 --port 40050 --window_title banner-nc-exps --logdir ~/repos/meta-gen/classification/result"
 
 # Path to your oh-my-zsh installation.
 export ZSH=".oh-my-zsh"
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="geometry/geometry"
 
 # Set list of themes to load
@@ -58,7 +55,7 @@ ZSH_THEME="geometry/geometry"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -101,3 +98,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
