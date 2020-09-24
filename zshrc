@@ -1,8 +1,7 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 export CUDA_DEVICE_ORDER=PCI_BUS_ID
+export LD_LIBRARY_PATH=~/miniconda3/lib:/usr/local/cuda/lib64/:/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
 export PYTHONBREAKPOINT=ipdb.set_trace
+
 alias nvidia="watch -n 1 nvidia-smi"
 alias tmux="TERM=screen-256color-bce tmux -2"
 alias tboard="tensorboard --host 0.0.0.0 --port 40050 --window_title banner-nc-exps --logdir ~/repos/meta-gen/classification/result"
@@ -104,7 +103,18 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/eddy/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/eddy/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/eddy/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/eddy/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
