@@ -1,13 +1,14 @@
 export CUDA_DEVICE_ORDER=PCI_BUS_ID
-export LD_LIBRARY_PATH=~/miniconda3/lib:/usr/local/cuda/lib64/:/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=~/miniconda3/lib:/usr/local/cuda/lib64/:/usr/local/cuda-10.2/lib64/:/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
 export PYTHONBREAKPOINT=ipdb.set_trace
 
-alias nvidia="watch -n 1 nvidia-smi"
+alias nvidia="watch -c -t -n 0.5 gpustat --color"
 alias tmux="TERM=screen-256color-bce tmux -2"
-alias tboard="tensorboard --host 0.0.0.0 --port 40050 --window_title banner-nc-exps --logdir ~/repos/meta-gen/classification/result"
+# alias tboard="tensorboard --host 0.0.0.0 --port 40050 --window_title sandbox --logdir ~/repos/NCv2/jax_regression/logs/ --reload_multifile=true --reload_interval 3"
+alias tboard="tensorboard --host 0.0.0.0 --port 40050 --window_title sandbox --logdir ~/repos/NCv2/sine_regression/logs/ --reload_multifile=true --reload_interval 3"
 
 # Path to your oh-my-zsh installation.
-export ZSH=".oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 ZSH_THEME="geometry/geometry"
 
